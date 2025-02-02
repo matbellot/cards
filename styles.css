@@ -1,20 +1,21 @@
 .slideshow-container {
     max-width: 100%;
     position: relative;
-    margin: auto;
-    padding: 0 10px;
-    height: 100vh;
+    height: 100vh;  /* Altezza totale dello schermo */
     display: flex;
-    align-items: center;
+    justify-content: center;  /* Centra orizzontalmente */
+    align-items: center;  /* Centra verticalmente */
+    padding: 0;  /* Rimuoviamo il padding */
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
 .slides {
     position: relative;
-    height: 80vh;
-    width: 100%;
+    width: 90%;  /* Usa il 90% della larghezza disponibile */
+    height: 90vh;  /* Usa il 90% dell'altezza dello schermo */
     aspect-ratio: 3/4;
-    background-color: #f0f0f0;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .slides img {
@@ -46,6 +47,7 @@
     background-color: rgba(0,0,0,0.5);
     border: none;
     border-radius: 3px;
+    z-index: 2;  /* Assicura che i pulsanti siano sempre sopra le immagini */
 }
 
 .next {
