@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Visualizzatore Carte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pagina di selezione modalità -->
+    <div id="modeSelector" class="mode-selector">
+        <h1 class="title">DIXIT</h1>
+        <h2>Scegli la modalità di visualizzazione</h2>
+        <div class="mode-buttons">
+            <button onclick="selezionaModalita('slideshow')">Slideshow</button>
+            <button onclick="selezionaModalita('grid')">Griglia con Playlist</button>
+        </div>
+    </div>
+
+    <!-- Contenitore Slideshow -->
+    <div id="slideshowContainer" class="slideshow-container" style="display: none;">
+        <div class="slides" id="slideContainer">
+            <!-- Le immagini verranno inserite qui dinamicamente -->
+        </div>
+        <button class="prev" onclick="cambiaSlide(-1)">&#10094;</button>
+        <button class="next" onclick="cambiaSlide(1)">&#10095;</button>
+        <button class="back-button" onclick="tornaAllaScelta()">Torna alla scelta</button>
+    </div>
+
+    <!-- Contenitore Grid e Playlist -->
+    <div id="gridContainer" class="grid-container" style="display: none;">
+        <button class="back-button" onclick="tornaAllaScelta()">Torna alla scelta</button>
+        
+        <div class="playlist-creator">
+            <input type="text" id="playlistName" placeholder="Nome della playlist">
+            <button onclick="creaPlaylist()">Crea Playlist</button>
+        </div>
+
+        <div id="playlists" class="playlists">
+            <!-- Le playlist verranno inserite qui -->
+        </div>
+
+        <div id="imageGrid" class="image-grid">
+            <!-- Le immagini verranno inserite qui -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
