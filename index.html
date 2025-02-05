@@ -19,12 +19,14 @@
 
     <!-- Contenitore Slideshow -->
     <div id="slideshowContainer" class="slideshow-container" style="display: none;">
+        <div class="playlist-title" id="playlistTitle"></div>
         <div class="slides" id="slideContainer">
             <!-- Le immagini verranno inserite qui dinamicamente -->
         </div>
         <button class="prev" onclick="cambiaSlide(-1)">&#10094;</button>
         <button class="next" onclick="cambiaSlide(1)">&#10095;</button>
         <button class="back-button" onclick="tornaAllaScelta()">Torna alla scelta</button>
+        <button class="fullscreen-btn" onclick="toggleFullscreen()">⤢</button>
     </div>
 
     <!-- Contenitore Grid e Playlist -->
